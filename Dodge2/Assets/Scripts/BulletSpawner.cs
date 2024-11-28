@@ -20,7 +20,7 @@ public class BulletSpawner : MonoBehaviour
 
         // 탄알 생성 간격을 spawnRateMin, spawnRateMax 사이중 랜덤 지정
         spawnRate = Random.Range(spawnRateMin, spawnRateMax);
-        // PlayerController 컴포넌트를 가진 오브젝트를 찾아 조준 대상으로 지정
+        // PlayerController 컴포넌트를 가진 오브젝트를 찾아 위치,각도,사이즈 값을 구하기
         target = FindObjectOfType<PlayerController>().transform;
     }
 

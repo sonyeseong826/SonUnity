@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
         PlayerRigidbody = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         // 수평축과 수직축의 입력값을 감지하여 저장

@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
 
     private float surviveTime; // 생존시간
     private bool isGameover; // 게임오버 상태
-    // Start is called before the first frame update
     void Start()
     {
         surviveTime = 0f; // 생존시간 초기화
