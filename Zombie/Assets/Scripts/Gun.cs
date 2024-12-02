@@ -57,7 +57,7 @@ public class Gun : MonoBehaviour {
     public void Fire() {
         // 현재 상태가 발사 가능한 상태
         // && 마지막 총 발사 시점에서 gunData.timeBetFire
-        if (state == State.Ready && Time.time >= lastFireTime + gunData.timeBetFire) 
+        if (state == State.Ready && Time.time >= lastFireTime + gunData.timeBetFire)
         { 
             //마지막 총 발사 지점 갱신
             lastFireTime = Time.time;
@@ -79,10 +79,10 @@ public class Gun : MonoBehaviour {
             // 레이가 어떤 물체와 충돌할 경우
 
             // 충돌한 상대방으로부터 IDamageable 오브젝트 가져오기 시도
-            IDamageable target = hit.collider.GetComponent<IDamageable>();
+            var target = hit.collider.GetComponent<IDamageable>();
 
             // 상대방으로부터 IDamageable 오브젝트를 가져오는 데 성공했다면
-            if(target != null)
+            if (target != null)
             {
                 // 상대방의 OnDamage 함수를 실행시켜 상대방에 대미지 주기
                 target.OnDamage(gunData.damage, hit.point, hit.normal);
@@ -106,7 +106,7 @@ public class Gun : MonoBehaviour {
         if(magAmmo <= 0)
         {
             // 탄창에 남은 탄알이 없다면 총의 현재 상태를 Empty로 갱신
-            state = State.Ready;
+            state = State.Empty;
         }
     }
 
