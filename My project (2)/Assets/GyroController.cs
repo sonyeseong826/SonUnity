@@ -1,3 +1,4 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -34,6 +35,7 @@ public class GyroController : MonoBehaviour
             
             gameObject.transform.rotation = new Quaternion(deviceRotation.y, -deviceRotation.z, -deviceRotation.x, deviceRotation.w);
             v3 = transform.eulerAngles;
+
             t.text = "°¢µµ" + v3;
 
         }
